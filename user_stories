@@ -1,0 +1,33 @@
+Need-to-haves:
+1. As a visitor, I want to see a directory of the restaurants available.
+2. As a visitor, when I click on a restaurant, I want to be able to see:
+address
+neighbourhood
+price range
+summary
+phone number
+menu
+a list of available timeslots
+3. As a visitor, I want to sign up for a customer account so that I can make reservations online
+4. As a customer, I want to be able to make a reservation online
+5. As a customer, I want to be able to set the number of people
+6. As a customer, I want to be able to cancel a reservation
+7. As a customer, I want to be able to see all my reservations
+8. As the restaurant owner, I want to be able to list my reseervations
+9. As the restaurant owner, I want to see the list of the weeks reservations
+
+Nice-to-have:
+1. Customer can filter categories (cuisine, neighbourhood, price) for viewing restaurants
+2. Customer can upload a review of the restaurants
+3. Customer can edit your reservation
+4. Restaurant owner can edit restaurant
+5. Restaurant owner can change the 1-hr capacity
+
+To consider:
+1. Photo uploads (for both customers and owners) of restaurant
+2. Loyalty points
+
+Initial need-to-have assumptions:
+1. A restaurant can only hold 100 people in any given time slot.
+2. A restaurant can only be open from 11am - 8pm, 7 days a week.
+3. A reservation can be for a party of 2 to 20 people.
