@@ -6,6 +6,7 @@ neighbourhood
 price range
 summary
 phone number
+cuisine type
 menu
 a list of available timeslots
 3. As a visitor, I want to sign up for a customer account so that I can make reservations online
@@ -13,7 +14,7 @@ a list of available timeslots
 5. As a customer, I want to be able to set the number of people
 6. As a customer, I want to be able to cancel a reservation
 7. As a customer, I want to be able to see all my reservations
-8. As the restaurant owner, I want to be able to list my reseervations
+8. As the restaurant owner, I want to be able to list my reservations
 9. As the restaurant owner, I want to see the list of the weeks reservations
 
 Nice-to-have:
@@ -22,12 +23,15 @@ Nice-to-have:
 3. Customer can edit your reservation
 4. Restaurant owner can edit restaurant
 5. Restaurant owner can change the 1-hr capacity
+6. Restaurant owner can see the upcoming weeks reservations
 
 To consider:
 1. Photo uploads (for both customers and owners) of restaurant
 2. Loyalty points
+3. Photo upload of the user
 
 Initial need-to-have assumptions:
 1. A restaurant can only hold 100 people in any given time slot.
 2. A restaurant can only be open from 11am - 8pm, 7 days a week.
 3. A reservation can be for a party of 2 to 20 people.
+4. A user
