@@ -1,1 +1,18 @@
-<h1> SUIT YOURSELF </h1>
+<h1> SEAT YOURSELF </h1>
+
+<% @restaurants.each do |r| %>
+  <%= r.name %>
+  <%= r.street_name %>
+  <%= r.neighbourhood %>
+  <%= r.postal_code %>
+  <%= r.city %>
+  <%= r.province %>
+  <%= r.country %>
+  <%= r.cuisine_type %>
+  <%= r.phone_number %>
+  <%= r.email %>
+  <%= r.price %>
+  <%= r.summary %>
+  <%= image_tag(r.image_1, :alt => "restaurant", height: 150, width: 150) %>
+  <br> <br>
+<% end %>
