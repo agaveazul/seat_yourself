@@ -501,3 +501,65 @@ Migrating to CreateReservations (20170207220916)
   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "restaurant_id", "timeslot", "party_size", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 3], ["restaurant_id", 3], ["timeslot", "11-12"], ["party_size", 8], ["date", 20170209], ["created_at", 2017-02-08 19:54:15 UTC], ["updated_at", 2017-02-08 19:54:15 UTC]]
   [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mReservation Load (3.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+Started GET "/" for 127.0.0.1 at 2017-02-08 15:25:23 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  Rendered restaurants/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 1558ms (Views: 1523.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-02-08 15:27:27 -0500
+  
+SyntaxError (/Users/AkshitSahani/Desktop/bitmaker/projects/seat_yourself/app/controllers/users_controller.rb:12: syntax error, unexpected ':', expecting keyword_end
+        render: new
+               ^):
+  
+app/controllers/users_controller.rb:12: syntax error, unexpected ':', expecting keyword_end
+  Rendering /Users/AkshitSahani/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/AkshitSahani/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/AkshitSahani/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /Users/AkshitSahani/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/AkshitSahani/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/AkshitSahani/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/AkshitSahani/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/AkshitSahani/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (114.7ms)
+Started GET "/users/new" for 127.0.0.1 at 2017-02-08 15:27:38 -0500
+  
+SyntaxError (/Users/AkshitSahani/Desktop/bitmaker/projects/seat_yourself/app/controllers/users_controller.rb:12: syntax error, unexpected ':', expecting keyword_end
+        render: :new
+               ^):
+  
+app/controllers/users_controller.rb:12: syntax error, unexpected ':', expecting keyword_end
+  Rendering /Users/AkshitSahani/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/AkshitSahani/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/AkshitSahani/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/AkshitSahani/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/AkshitSahani/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/AkshitSahani/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/AkshitSahani/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/AkshitSahani/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (100.8ms)
+Started GET "/users/new" for 127.0.0.1 at 2017-02-08 15:27:44 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (137.7ms)
+Completed 200 OK in 321ms (Views: 260.9ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-02-08 15:28:31 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pSmrUVhC6KOo/LlkkcWnbTY72ol1OHT+QcT8z68oCAbk1+6++fnVgIG9anROQO9xN0UkW83lbyATppaKz3XZwg==", "user"=>{"email"=>"akshit_sahani@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (53.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "akshit_sahani@hotmail.com"], ["password_digest", "$2a$10$eDZ2fZwQH/oFp1lG2ZaFe.hHI.Zr5Qjwfd18MgySRN0bSn/2dwe/C"], ["created_at", 2017-02-08 20:28:31 UTC], ["updated_at", 2017-02-08 20:28:31 UTC]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/restaurants
+Completed 302 Found in 231ms (ActiveRecord: 58.4ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2017-02-08 15:28:31 -0500
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  Rendered restaurants/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
