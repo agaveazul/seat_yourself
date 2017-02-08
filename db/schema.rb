@@ -32,19 +32,21 @@ ActiveRecord::Schema.define(version: 20170207220916) do
     t.string   "province"
     t.string   "country"
     t.string   "cuisine_type"
-    t.integer  "phone_number"
+    t.bigint   "phone_number"
     t.string   "email"
     t.string   "price"
     t.text     "summary"
     t.string   "menu"
     t.integer  "user_id"
+    t.string   "image_1"
+    t.string   "image_2"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-    t.integer  "phone_number"
+    t.bigint   "phone_number"
     t.string   "email"
     t.string   "password_digest"
     t.datetime "created_at",      null: false

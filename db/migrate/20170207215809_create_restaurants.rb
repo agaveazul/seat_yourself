@@ -10,12 +10,14 @@ class CreateRestaurants < ActiveRecord::Migration[5.0]
       t.string :province
       t.string :country
       t.string :cuisine_type
-      t.integer :phone_number
+      t.bigint :phone_number
       t.string :email
       t.string :price
       t.text :summary
       t.string :menu
       t.integer :user_id
+      t.string :image_1
+      t.string :image_2
 
       t.timestamps
     end
