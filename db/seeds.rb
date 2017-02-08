@@ -40,7 +40,7 @@ email: 'osteria.francescana@gmail.il',
 price: '$$$$',
 summary: "In 2016, it was rated as the world's best restaurant in the World's 50 Best Restaurant",
 menu: "link_to_menu",
-user_id: 1,
+user_id: 10,
 image_1: "osteria_francescana.jpg",
 image_2: "#")
 
@@ -58,7 +58,7 @@ email: 'patagonia.sur@gmail.ar',
 price: '$$$$',
 summary: "Bringing the gaucho tradition to La Boca, the restaurant centers on Argentine specialtries like succulent roasted Patagonian lamb and ojo de bife",
 menu: "link_to_menu",
-user_id: 2,
+user_id: 11,
 image_1: "patagonia_sur.jpg",
 image_2: "#")
 
@@ -76,10 +76,10 @@ email: 'd.o.m@gmail.br',
 price: '$$$$',
 summary: "Regularly named among the best restaurants in South America and the world, D.O.M. focuses on Brazilian fare with added flair.",
 menu: "link_to_menu",
-user_id: 3,
+user_id: 12,
 image_1: "dom.jpg",
 image_2: "#")
 
-Reservation.create!(user_id: 1, restaurant_id: 1, timeslot: "4-5", party_size: 10, date: 20170211)
-Reservation.create!(user_id: 2, restaurant_id: 2, timeslot: "7-8", party_size: 6, date: 20170210)
-Reservation.create!(user_id: 3, restaurant_id: 3, timeslot: "11-12", party_size: 8, date: 20170209)
+Reservation.create!(user_id: 10, restaurant_id: 10, timeslot: "4-5", party_size: 10, date: 20170211)
+Reservation.create!(user_id: 11, restaurant_id: 11, timeslot: "7-8", party_size: 6, date: 20170210)
+Reservation.create!(user_id: 12, restaurant_id: 12, timeslot: "11-12", party_size: 8, date: 20170209)

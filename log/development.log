@@ -501,6 +501,7 @@ Migrating to CreateReservations (20170207220916)
   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "restaurant_id", "timeslot", "party_size", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 3], ["restaurant_id", 3], ["timeslot", "11-12"], ["party_size", 8], ["date", 20170209], ["created_at", 2017-02-08 19:54:15 UTC], ["updated_at", 2017-02-08 19:54:15 UTC]]
   [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mReservation Load (3.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2017-02-08 15:25:23 -0500
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by RestaurantsController#index as HTML
@@ -563,3 +564,81 @@ Processing by RestaurantsController#index as HTML
 Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.0ms)
 
 
+=======
+  [1m[36mRestaurant Load (4.9ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[36mRestaurant Load (6.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35mSQL (3.4ms)[0m  [1m[31mDELETE FROM "restaurants"[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35mSQL (9.0ms)[0m  [1m[31mDELETE FROM "reservations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "phone_number", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Massimo Bottura"], ["phone_number", 1234567890], ["email", "massimo.bottura@gmail.it"], ["password_digest", "$2a$10$F88Plejn./4Buh/hbfdFB.ismXejnhHTAbOkiwDyfwYAzzgZRKUE."], ["created_at", 2017-02-08 20:01:45 UTC], ["updated_at", 2017-02-08 20:01:45 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Francis Mallmann"], ["email", "francis.mallmann@gmail.ar"], ["password_digest", "$2a$10$rNy0wBTC1sZKa4ORIMDEgeiiicRnfySPtuqmON0BMkPnrsm6ZjGfS"], ["created_at", 2017-02-08 20:01:45 UTC], ["updated_at", 2017-02-08 20:01:45 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Alex Atala"], ["email", "alexa.atala@gmail.br"], ["password_digest", "$2a$10$4EujPWM8/EIlEb5naSW4BuRTtnd.rue5PSwkMUtMlE5LWCgMvV746"], ["created_at", 2017-02-08 20:01:45 UTC], ["updated_at", 2017-02-08 20:01:45 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "phone_number", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Massimo Bottura"], ["phone_number", 1234567890], ["email", "massimo.bottura@gmail.it"], ["password_digest", "$2a$10$byWZwofVXMJRqRMjvwxdDumJBOwD/.c.WsPx5.pbxb5zgIQnausFW"], ["created_at", 2017-02-08 20:02:19 UTC], ["updated_at", 2017-02-08 20:02:19 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Francis Mallmann"], ["email", "francis.mallmann@gmail.ar"], ["password_digest", "$2a$10$zpzojexXeTL7Kys7LbKHne.gTGA77vUcHsvUYRJ3jeT6LWiRQoJbW"], ["created_at", 2017-02-08 20:02:19 UTC], ["updated_at", 2017-02-08 20:02:19 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Alex Atala"], ["email", "alexa.atala@gmail.br"], ["password_digest", "$2a$10$DI5wu2rusVFN1WJC82vP6ePBTMvBitoDt.tEzPh19HofSV9Dv2yi2"], ["created_at", 2017-02-08 20:02:19 UTC], ["updated_at", 2017-02-08 20:02:19 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "capacity", "street_name", "neighbourhood", "postal_code", "city", "province", "country", "cuisine_type", "phone_number", "email", "price", "summary", "menu", "user_id", "image_1", "image_2", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Osteria Francescana"], ["capacity", 100], ["street_name", "Via Stella 22"], ["neighbourhood", "City Center"], ["postal_code", "41100"], ["city", "Modena"], ["province", "Emilia-Romagna"], ["country", "Italy"], ["cuisine_type", "Italian"], ["phone_number", 39059223912], ["email", "osteria.francescana@gmail.il"], ["price", "$$$$"], ["summary", "In 2016, it was rated as the world's best restaurant in the World's 50 Best Restaurant"], ["menu", "link_to_menu"], ["user_id", 10], ["image_1", "osteria_francescana.jpg"], ["image_2", "#"], ["created_at", 2017-02-08 20:04:10 UTC], ["updated_at", 2017-02-08 20:04:10 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "capacity", "street_name", "neighbourhood", "postal_code", "city", "province", "country", "cuisine_type", "phone_number", "email", "price", "summary", "menu", "user_id", "image_1", "image_2", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Patagonia Sur"], ["capacity", 100], ["street_name", "Rocha 801 (Pedro de Mendoza corner) - La Boca - Buenos Aires"], ["neighbourhood", "La Boca"], ["postal_code", "11111"], ["city", "Buenos Aires"], ["province", "Autonoma de Buenos Aires"], ["country", "Argentina"], ["cuisine_type", "Argentinian"], ["phone_number", 541143035917], ["email", "patagonia.sur@gmail.ar"], ["price", "$$$$"], ["summary", "Bringing the gaucho tradition to La Boca, the restaurant centers on Argentine specialtries like succulent roasted Patagonian lamb and ojo de bife"], ["menu", "link_to_menu"], ["user_id", 11], ["image_1", "patagonia_sur.jpg"], ["image_2", "#"], ["created_at", 2017-02-08 20:04:10 UTC], ["updated_at", 2017-02-08 20:04:10 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "capacity", "street_name", "neighbourhood", "postal_code", "city", "province", "country", "cuisine_type", "phone_number", "email", "price", "summary", "menu", "user_id", "image_1", "image_2", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "D.O.M."], ["capacity", 100], ["street_name", "R. Barão de Capanema"], ["neighbourhood", "Barão"], ["postal_code", "1111"], ["city", "Sao Paolo"], ["province", "Sao Paolo"], ["country", "Brazil"], ["cuisine_type", "Brazillian"], ["phone_number", 551130880762], ["email", "d.o.m@gmail.br"], ["price", "$$$$"], ["summary", "Regularly named among the best restaurants in South America and the world, D.O.M. focuses on Brazilian fare with added flair."], ["menu", "link_to_menu"], ["user_id", 12], ["image_1", "dom.jpg"], ["image_2", "#"], ["created_at", 2017-02-08 20:04:10 UTC], ["updated_at", 2017-02-08 20:04:10 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRestaurant Load (1.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "restaurant_id", "timeslot", "party_size", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 10], ["restaurant_id", 10], ["timeslot", "4-5"], ["party_size", 10], ["date", 20170211], ["created_at", 2017-02-08 20:04:50 UTC], ["updated_at", 2017-02-08 20:04:50 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "restaurant_id", "timeslot", "party_size", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 11], ["restaurant_id", 11], ["timeslot", "7-8"], ["party_size", 6], ["date", 20170210], ["created_at", 2017-02-08 20:04:50 UTC], ["updated_at", 2017-02-08 20:04:50 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "restaurant_id", "timeslot", "party_size", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 12], ["restaurant_id", 12], ["timeslot", "11-12"], ["party_size", 8], ["date", 20170209], ["created_at", 2017-02-08 20:04:50 UTC], ["updated_at", 2017-02-08 20:04:50 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRestaurant Load (1.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+>>>>>>> bf6117a450ee8f272488ac7564a80a2e185ae825
