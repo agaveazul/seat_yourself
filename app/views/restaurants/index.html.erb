@@ -1,1 +1,18 @@
 <h1> SUIT YOURSELF </h1>
+
+<% @restaurants.each do |r| %>
+  <%= r.name %>
+  <%= r.street_name %>
+  <%= r.neighbourhood %>
+  <%= r.postal_code %>
+  <%= r.city %>
+  <%= r.province %>
+  <%= r.country %>
+  <%= r.cuisine_type %>
+  <%= r.phone_number %>
+  <%= r.email %>
+  <%= r.price %>
+  <%= r.summary %>
+  <%= r.image_1 %>
+  <br> <br>
+<% end %>
