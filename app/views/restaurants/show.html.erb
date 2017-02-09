@@ -16,7 +16,6 @@
  <% end %>
 
 
-
 <div class="restaurant_container">
 <div class="restaurant_image_container">
   <%= image_tag(@restaurant.image_1, :alt => "restaurant", class: "restaurant_top_image", width: "48%") %>
@@ -42,6 +41,7 @@
 <%= @restaurant.street_name %>, <%= @restaurant.postal_code %>, <%= @restaurant.city %>,
 <%= @restaurant.province %>, <%=@restaurant.country %>
 <br>
+  
 <%= @restaurant.email %>
 <%= @restaurant.phone_number %>
 <br>
