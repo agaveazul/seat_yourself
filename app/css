@@ -1,0 +1,22 @@
+.links {}
+
+.links {text-align: right;/* display: inline-block; */padding: 0px 15px;}
+
+header {
+    font-family: sans-serif;
+    background: #50e107;
+    border-radius: 5px;
+}
+
+.root {padding: 1px 0px 0px 10px;}
+
+p {
+}
+
+footer {
+    text-align: right;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
