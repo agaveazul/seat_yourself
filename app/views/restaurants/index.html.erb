@@ -1,21 +1,20 @@
 
 <main>
   <div class="hero-image">
-
-    <%= image_tag("chefs-table.jpg") %>
+<span class="chef-image">    <%= image_tag("chefs-table.jpg") %> </span>
     <h1 class="hero-title"> SEAT YOURSELF </h1>
 </div>
 <% @restaurants.each do |r| %>
 <div class='all-restaurants'>
   <%= image_tag(r.image_1, :alt => "restaurant", height: 150, width: 150) %><br>
   <div class="restaurant-info">
-  <%= r.name %><br>
+  <p class="restaurant-name"><%= r.name %><br></p>
 
+  <p class="restaurant-price"><%= r.price %><br><br><br></p>
   <%= r.neighbourhood %><br>
 
   <%= r.cuisine_type %><br>
 
-  <%= r.price %><br>
   </div>
 </div>
 <% end %>

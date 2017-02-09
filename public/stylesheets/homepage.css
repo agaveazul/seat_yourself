@@ -10,17 +10,19 @@ img {
 .all-restaurants {
     display: inline-block;
     border: 1px solid #FFC107;
-    width: 28%;
+    width: 30%;
     position: relative;
     height: 18rem;
+    margin: 1.3%;
+    border-radius: 10px;
 }
 
 .restaurant-info {
-  background-color: rgba(200,210,20,0.6);
+  background-color: rgba(100,100,100,0.5);
   position: absolute;
   top: 2rem;
   line-height: 1.5rem;
-  color: crimson;
+  color: white;
   width: 100%;
   text-align: center;
 }
@@ -32,12 +34,27 @@ img {
     color: rgba(250, 0, 0, 1);
     background-color: rgba(39, 33, 33, 0.31);
     font-size: 5rem;
-    padding: 1.5rem;
-    width: 95%;
+    /*padding: 1.5rem;*/
+    width: 100%;
     font-weight: bold;
     font-family: 'Caveat Brush', cursive;
 }
 
 .hero-image {
     position: relative;
+}
+
+.restaurant-name {
+  color: red;
+  font-family: 'Sansita';
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.restaurant-price {
+  color: gold;
+}
+
+.all-restaurants img {
+    border-radius: 10px;
 }

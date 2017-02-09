@@ -1,0 +1,46 @@
+html {
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  color: #333333;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+header {
+    background: #36454f;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+footer {
+  text-align: right;
+  background-color: #36454f;
+  color: white;
+  padding: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+header a {
+    color: white;
+}
+
+.links {
+  text-align: right;
+  width: 51%;
+  padding: 0px 15px;
+  display: inline-block;
+}
+
+.root {
+    padding-left: 1.5rem;
+    width: 41%;
+    float: left;
+}
