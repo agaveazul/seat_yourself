@@ -16,7 +16,7 @@ class Reservation < ApplicationRecord
 
     restaurant = Restaurant.find(restaurant_id).name
 
-    if party_size > available_capacity
+    if party_size >  available_capacity
       errors.add(restaurant, 'does not have enough space for this number of guests!')
     end
   end

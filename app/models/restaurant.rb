@@ -15,7 +15,7 @@ class Restaurant < ApplicationRecord
       capacity = Restaurant.find(restaurant_id).capacity
       available_capacity = capacity - total_reservations
         if available_capacity > 10
-          p "Available (#{available_capacity} seats)"
+          p "Available"
         elsif available_capacity > 0 && available_capacity <= 10
           p "#{available_capacity} seats available"
         else
