@@ -7,11 +7,14 @@ class ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.new(reservation_params)
+    @restaurant = Restaurant.find(params[:reservation][:restaurant_id])
     if @reservation.save
-      redirect_to reservation_path
+      redirect_to reservation_path(@reservation)
     else
-      redirect_to restaurant_path(@restaurant)
+      @timeslots = ["11-12", "12-1", "1-2", "2-3", "3-4", "4-5", "5-6", "6-7", "7-8", "8-9"]
+      render '/restaurants/show'
     end
+
   end
 
   def index

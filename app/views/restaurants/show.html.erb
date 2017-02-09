@@ -1,3 +1,15 @@
+<% if @reservation.errors.any? %>
+   <div id="error_explanation">
+     <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+     <ul>
+     <% @reservation.errors.full_messages.each do |msg| %>
+       <li><%= msg %></li>
+     <% end %>
+     </ul>
+   </div>
+ <% end %>
+ 
 <h1>Restaurant: </h1>
 
 <%= @restaurant.name %>
@@ -35,26 +47,13 @@
 <h1>Make a reservation</h1>
 
   <%= form_for @reservation do |f| %>
-
-  <% if @reservation.errors.any? %>
-     <div id="error_explanation">
-       <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this product from being saved:</h2>
-
-       <ul>
-       <% @reservation.errors.full_messages.each do |msg| %>
-         <li><%= msg %></li>
-       <% end %>
-       </ul>
-     </div>
-   <% end %>
-
    <%= f.label :party_size %>
    <%= f.number_field :party_size %>
 
    <%= f.label :date %>
    <%= f.date_field :date %>
 
-   <%= f.hidden_field :user_id, :value => "1" %>
+   <%= f.hidden_field :user_id, :value => session[:user_id] %>
    <%= f.hidden_field :restaurant_id, :value => @restaurant.id %>
 
   <%= f.label :timeslot %>
