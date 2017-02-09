@@ -1,3 +1,8 @@
+    <%= stylesheet_link_tag 'application' %>
+
+
+
+
 <% if @reservation.errors.any? %>
    <div id="error_explanation">
      <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this product from being saved:</h2>
@@ -10,55 +15,91 @@
    </div>
  <% end %>
 
-<h1>Restaurant: </h1>
 
-<%= @restaurant.name %>
-<%= @restaurant.street_name %>
-<%= @restaurant.neighbourhood %>
-<%= @restaurant.postal_code %>
-<%= @restaurant.city %>
-<%= @restaurant.province %>
-<%= @restaurant.country %>
-<%= @restaurant.cuisine_type %>
-<%= @restaurant.phone_number %>
-<%= @restaurant.email %>
-<%= @restaurant.price %>
-<%= @restaurant.summary %>
-<%= image_tag(@restaurant.image_1, :alt => "restaurant", height: 150, width: 150) %>
-
-<p> Date: </p> <%= @date %>
-
-<%= form_tag do %>
-  <input type="hidden" name="_method" value="patch">
-  <label for="date">Check Availability:</label>
-  <input type="date" name="date" id="date" value="date"><br>
-  <input type="submit" value="Submit">
-<% end %>
-
-<% @timeslots.each do |t| %>
-<% time_slot = t %>
-<%= time_slot %>
-<%= @restaurant.timeslot_check(time_slot, @restaurant.id, @date) %>
+<div class="restaurant_container">
+<div class="restaurant_image_container">
+  <%= image_tag(@restaurant.image_1, :alt => "restaurant", class: "restaurant_top_image", width: "48%") %>
+</div>
+<div class="restaurant_details_container">
+<div class="restaurant_details_header">
+<div class="restaurant_title">
+<h1><%= @restaurant.name %><br></h1>
+<%= @restaurant.neighbourhood %>, <%= @restaurant.city %>, <%=@restaurant.country %>
+</div>
+<div class="restaurant_attributes">
+  <%= @restaurant.price %>
+  <br>
+  <%= @restaurant.cuisine_type %>
+</div>
+</div>
+<br><br><br><br><br>
+<div class="restaurant_details_summary"><%= @restaurant.summary %></div>
+<br><br><br>
 <br>
-<% end %>
-
-
-
-<h1>Make a reservation</h1>
-
-  <%= form_for @reservation do |f| %>
-   <%= f.label :party_size %>
-   <%= f.number_field :party_size %>
-
-   <%= f.label :date %>
-   <%= f.date_field :date %>
-
-   <%= f.hidden_field :user_id, :value => session[:user_id] %>
-   <%= f.hidden_field :restaurant_id, :value => @restaurant.id %>
-
-  <%= f.label :timeslot %>
-  <%= f.select :timeslot, ['11-12', '12-1', '1-2', '2-3', '3-4', '4-5', '5-6', '6-7', '7-8', '8-9']%>
-  <%= f.submit "Make a reservation" %>
-
-  <% end %>
+<br>
+<div class="restaurant_details_footer"><b>
+<%= @restaurant.street_name %>, <%= @restaurant.postal_code %>, <%= @restaurant.city %>,
+<%= @restaurant.province %>, <%=@restaurant.country %>
+<br>
   
+<%= @restaurant.email %>
+<%= @restaurant.phone_number %>
+<br>
+</b>
+</div>
+</div>
+</div>
+
+
+<div class="available">
+  <div class="date_container">
+    <div class="date_header_container">
+      <h2> Availability </h2>
+    <div class="chosen_date">
+      <p> Date: <%= @date %> </p>
+    </div>
+    <div class="select_date"
+    <%= form_tag do %>
+      <input type="hidden" name="_method" value="patch">
+      <label for="date">Change date:</label>
+      <input type="date" name="date" id="date" value="date">
+      <input type="submit" value="Check">
+    <% end %>
+    </div>
+  </div>
+    <div class="timeslots">
+
+  <% @timeslots.each do |t| %>
+  <% time_slot = t %>
+  <%= time_slot %> pm:
+  <%= @restaurant.timeslot_check(time_slot, @restaurant.id, @date) %>
+  <br>
+  <% end %>
+  </div>
+  </div>
+
+  <div class="reservation">
+    <h2>Make a reservation</h2>
+
+    <br><br><br><br><br><br>
+
+      <%= form_for @reservation do |f| %>
+       <%= f.label :party_size %>
+       <%= f.number_field :party_size %>
+
+       <%= f.label :date %>
+       <%= f.date_field :date %>
+
+       <%= f.hidden_field :user_id, :value => session[:user_id] %>
+       <%= f.hidden_field :restaurant_id, :value => @restaurant.id %>
+
+      <%= f.label :timeslot %>
+      <%= f.select :timeslot, @timeslots%>
+
+      <%= f.submit "Make a reservation" %>
+
+      <% end %> <br><br><br><br><br><br>
+  </div>
+
+
+</div>
