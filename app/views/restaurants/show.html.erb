@@ -14,6 +14,14 @@
 <%= @restaurant.summary %>
 <%= image_tag(@restaurant.image_1, :alt => "restaurant", height: 150, width: 150) %>
 
+<p> Date: </p> <%= @date %>
+
+<%= form_tag do %>
+  <input type="hidden" name="_method" value="patch">
+  <label for="date">Check Availability:</label>
+  <input type="date" name="date" id="date" value="date"><br>
+  <input type="submit" value="Submit">
+<% end %>
 
 <% @timeslots.each do |t| %>
 <% time_slot = t %>
@@ -21,3 +29,41 @@
 <%= @restaurant.timeslot_check(time_slot, @restaurant.id, @date) %>
 <br>
 <% end %>
+
+
+
+<h1>Make a reservation</h1>
+  <%= form_for @reservation do |f| %>
+
+  <% if @reservation.errors.any? %>
+     <div id="error_explanation">
+       <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+       <ul>
+       <% @reservation.errors.full_messages.each do |msg| %>
+         <li><%= msg %></li>
+       <% end %>
+       </ul>
+     </div>
+   <% end %>
+
+  <p>
+    <%= f.label :party_size %>
+    <%= f.number_field :party_size %>
+  </p>
+<p>
+  <%= radio_button_tag(:timeslot, "11-12") %>
+  <%= label_tag(:timeslot, "11-12") %>
+  <%= radio_button_tag(:timeslot, "12-1") %>
+  <%= label_tag(:timeslot, "12-1") %>
+</p>
+<label for="date">Date</label>
+<input id="date" name="date" type="date" value="<%=@date%>" />
+<p>
+<input type="hidden" name="restaurant_id" value="<%=@restaurant.id%>">
+<input type="hidden" name="user_id" value="1">
+</p>
+  <div>
+    <%= f.submit "Make a reservation" %>
+  </div>
+  <% end %>
