@@ -1,18 +1,25 @@
-<h1> SEAT YOURSELF </h1>
 
+<main>
+  <div class="hero-image">
+
+    <%= image_tag("chefs-table.jpg") %>
+    <h1 class="hero-title"> SEAT YOURSELF </h1>
+</div>
 <% @restaurants.each do |r| %>
-  <%= r.name %>
-  <%= r.street_name %>
-  <%= r.neighbourhood %>
-  <%= r.postal_code %>
-  <%= r.city %>
-  <%= r.province %>
-  <%= r.country %>
-  <%= r.cuisine_type %>
-  <%= r.phone_number %>
-  <%= r.email %>
-  <%= r.price %>
-  <%= r.summary %>
-  <%= image_tag(r.image_1, :alt => "restaurant", height: 150, width: 150) %>
-  <br> <br>
+<div class='all-restaurants'>
+  <%= image_tag(r.image_1, :alt => "restaurant", height: 150, width: 150) %><br>
+  <div class="restaurant-info">
+  <%= r.name %><br>
+
+  <%= r.neighbourhood %><br>
+
+  <%= r.cuisine_type %><br>
+
+  <%= r.price %><br>
+  </div>
+</div>
 <% end %>
+
+</main>
+
+<%= stylesheet_link_tag 'homepage' %>
