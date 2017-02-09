@@ -1,29 +1,18 @@
 class RestaurantsController < ApplicationController
 
-helper_method :timeslot_check_4
-
-  def timeslot_check_4
-  date = 20170210
-  total_reservations = Reservation.where(timeslot: "4-5", date: date).sum(:party_size)
-  capacity = 100
-  available_capacity = capacity - total_reservations
-  if available_capacity > 10
-    p "Available"
-    p available_capacity
-  elsif available_capacity > 0 && available_capacity <= 10
-    p available_capacity
-  else
-    p "Unavailable"
-    p available_capacity
-  end
-  end
-
   def index
     @restaurants = Restaurant.all
   end
 
   def show
     @restaurant = Restaurant.find(params[:id])
+    @timeslots = ["11-12", "12-1", "1-2", "2-3", "3-4", "4-5", "5-6", "6-7", "7-8"]
+
+    if params[:date]
+      @date = params[:date]
+    else
+      @date = Date.today
+    end
 
   end
 

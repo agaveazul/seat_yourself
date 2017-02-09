@@ -15,6 +15,9 @@
 <%= image_tag(@restaurant.image_1, :alt => "restaurant", height: 150, width: 150) %>
 
 
-<p>4-5 PM</p>
-<%= timeslot_check_4 %>
-<p>Select</p>
+<% @timeslots.each do |t| %>
+<% time_slot = t %>
+<%= time_slot %>
+<%= @restaurant.timeslot_check(time_slot, @restaurant.id, @date) %>
+<br>
+<% end %>
