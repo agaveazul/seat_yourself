@@ -1,28 +1,30 @@
-.links {
-
-}
-
-.links {
-  text-align: right;
-  padding: 0px 15px;
-}
 
 header {
     font-family: sans-serif;
     background: #50e107;
     border-radius: 5px;
+    overflow: hidden;
 }
-
-.root {padding: 1px 0px 0px 10px;}
-
 footer {
-    text-align: right;
-    background-color: black;
-    color: white;
-    padding: 15px;
+  text-align: right;
+  background-color: black;
+  color: white;
+  padding: 15px;
 }
-
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+.links {
+  text-align: right;
+  width: 51%;
+  padding: 0px 15px;
+  background-color: #50e107;
+  display: inline-block;
+}
+.root {
+    padding: 1px 0px 0px 5px;
+    width: 41%;
+    float: left;
 }
