@@ -1,0 +1,15 @@
+<h1>This is <%= @user.name %>'s page</h1>
+<p>Phone Number : <%= @user.phone_number %></p>
+<p>Email : <%= @user.email %></p>
+
+<div>
+  <h1>Reservations</h1>
+  <% if current_user.id == @user.id %>
+    <% @user.reservations.each do |r| %>
+    <p> Restaurant : <%= r.reserved_restaurant.name %> </p><br>
+    <p> Reservation Time : <%= r.timeslot %></p> <br>
+    <p> Party Size : <%= r.party_size %></p> <br>
+    <p> Day of Reservation : <%= r.date %> </p>
+    <% end %>
+    <% end %>
+</div>
