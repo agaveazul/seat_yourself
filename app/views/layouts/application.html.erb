@@ -5,7 +5,8 @@
     <%= csrf_meta_tags %>
     <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
-
+    <%= javascript_include_tag 'application' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %> 
     <%= stylesheet_link_tag 'header_footer' %>
   </head>
   <header>
@@ -14,7 +15,11 @@
     </div>
     <div class="links">
       <p><%= link_to 'Log In', new_session_url %>    |    <%= link_to 'Sign Up', new_user_url %></p>
-    </div>
+    </div><br>
+    <% if current_user %>
+    Signed in as <%= current_user.name %>, <%= link_to 'Log out', session_path("current"), :method => :delete %>
+
+    <% end %>
   </header>
 
   <body>
@@ -25,6 +30,13 @@
      <p id="alert"><%= flash[:alert] %></p>
    <% end %>
     <%= yield %>
+
+  <p>
+    <% if current_user %>
+    Signed in as <%= current_user.name %>, <%= link_to 'Log out', session_path("current"), :method => :destroy %>
+
+    <% end %>
+  </p>
   </body>
   <footer>
     <p>© Akshit Sahani, Richard Strauss, Matthew Evershed, Justin Cheung, Leon Chung</p>
