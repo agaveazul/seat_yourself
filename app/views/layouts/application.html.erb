@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
     <%= javascript_include_tag 'application' %>
-    <%= stylesheet_link_tag 'application', media: 'all' %> 
+    <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_link_tag 'header_footer' %>
   </head>
   <header>
@@ -14,12 +14,12 @@
       <h1> <%= link_to 'Seat Yourself', root_url %></h1>
     </div>
     <div class="links">
+      <% if current_user %>
+      <p> Signed in as <%= current_user.name %>, <%= link_to 'Log out', session_path("current"), :method => :delete %> </p>
+      <% else %>
       <p><%= link_to 'Log In', new_session_url %>    |    <%= link_to 'Sign Up', new_user_url %></p>
-    </div><br>
-    <% if current_user %>
-    Signed in as <%= current_user.name %>, <%= link_to 'Log out', session_path("current"), :method => :delete %>
-
-    <% end %>
+      <% end %><br>
+    </div>
   </header>
 
   <body>
