@@ -20,7 +20,7 @@ img {
 .restaurant-info {
   background-color: rgba(100,100,100,0.5);
   position: absolute;
-  top: 2rem;
+  top: 1.8rem;
   line-height: 1.5rem;
   color: white;
   width: 100%;
@@ -29,12 +29,12 @@ img {
 
 .hero-title {
     position: absolute;
-    top: 46%;
+    top: 35%;
     /* left: 12%; */
-    color: rgba(250, 0, 0, 1);
+    color: red;
     background-color: rgba(39, 33, 33, 0.31);
     font-size: 5rem;
-    /*padding: 1.5rem;*/
+    padding-left: 6rem;
     width: 100%;
     font-weight: bold;
     font-family: 'Caveat Brush', cursive;
@@ -45,14 +45,13 @@ img {
 }
 
 .restaurant-name {
-  color: red;
   font-family: 'Sansita';
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 300;
 }
 
 .restaurant-price {
-  color: gold;
+  color: red;
 }
 
 .all-restaurants img {
