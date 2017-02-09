@@ -1,14 +1,12 @@
 class RestaurantsController < ApplicationController
 
-<<<<<<< HEAD
-=======
   def index
     @restaurants = Restaurant.all
   end
 
   def show
     @restaurant = Restaurant.find(params[:id])
-    @timeslots = ["11-12", "12-1", "1-2", "2-3", "3-4", "4-5", "5-6", "6-7", "7-8"]
+    @timeslots = ["11-12", "12-1", "1-2", "2-3", "3-4", "4-5", "5-6", "6-7", "7-8", "8-9"]
 
     if params[:date]
       @date = params[:date]
@@ -52,5 +50,4 @@ private
       :email, :price, :summary, :menu)
   end
 
->>>>>>> 35dced35f5460f3c08a874df38be75bb2f532c95
 end
