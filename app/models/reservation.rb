@@ -5,6 +5,7 @@ class Reservation < ApplicationRecord
   validates :party_size, :user_id, :restaurant_id, :date, :timeslot, presence: true
   validates :party_size, numericality: {greater_than: 0}
   validate :party_size_less_than_capacity
+  validate :date_greater_than_or_equal_to_today
 
   private
 
@@ -17,6 +18,12 @@ class Reservation < ApplicationRecord
 
     if party_size > available_capacity
       errors.add(restaurant, 'does not have enough space for this number of guests!')
+    end
+  end
+
+  def date_greater_than_or_equal_to_today
+    if date < Date.today
+      errors.add(:date, 'cannot be before today.')
     end
   end
 end
