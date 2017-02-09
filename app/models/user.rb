@@ -8,5 +8,4 @@ class User < ApplicationRecord
   validates :phone_number, numericality: {only_integer: true}
   validates :phone_number, :email, uniqueness: true
   validates :password, confirmation: true
-
 end
