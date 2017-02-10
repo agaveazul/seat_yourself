@@ -12,15 +12,16 @@ html {
 }
 
 header {
-    background: #36454f;
+    background-color: white;
     overflow: hidden;
-    margin-bottom: 25px;
+    margin-bottom: -13px;
 }
 
 footer {
   text-align: right;
-  background-color: #36454f;
-  color: white;
+  /*background-color: #36454f;*/
+  /*color: white;*/
+  background-color: white;
   padding: 15px;
 }
 
@@ -29,7 +30,8 @@ a {
 }
 
 header a {
-    color: white;
+    color: red;
+    font-family: "Caveat Brush";
 }
 
 .links {
