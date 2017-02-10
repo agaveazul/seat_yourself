@@ -25,7 +25,7 @@ class ReservationsController < ApplicationController
   def destroy
     @reservation = Reservation.find(params[:id])
     @reservation.destroy
-    redirect_to restaurants_path
+    redirect_to restaurants_path, :notice => "Your reservation has been deleted."
   end
 
   def show
@@ -40,9 +40,10 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.find(params[:id])
 
     if @reservation.update_attributes(reservation_params)
-      redirect_to reservation_url(@reservation)
+      redirect_to reservation_url(@reservation), :notice => "Your reservation has been successfully updated!"
     else
-      render :edit
+      # render :edit
+      redirect_to(edit_reservation_path(@reservation), {:flash => { :reservation_errors => @reservation.errors.full_messages }})
     end
   end
 

@@ -1,3 +1,15 @@
+<% if flash[:reservation_errors] %>
+   <div id="error_explanation">
+     <h2><%= pluralize(flash[:reservation_errors].count, "error") %> prohibited this product from being saved:</h2>
+
+     <ul>
+     <%flash[:reservation_errors].each do |msg| %>
+       <li><%= msg %></li>
+     <% end %>
+     </ul>
+   </div>
+ <% end %>
+
 <%= form_for @reservation do |f| %>
  <%= f.label :party_size %>
  <%= f.number_field :party_size %>
