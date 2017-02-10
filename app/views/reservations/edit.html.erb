@@ -1,0 +1,15 @@
+<%= form_for @reservation do |f| %>
+ <%= f.label :party_size %>
+ <%= f.number_field :party_size %>
+
+ <%= f.label :date %>
+ <%= f.date_field :date %>
+
+ <%= f.hidden_field :user_id, :value => session[:user_id] %>
+
+
+<%= f.label :timeslot %>
+<%= f.select :timeslot, ['11-12', '12-1', '1-2', '2-3', '3-4', '4-5', '5-6', '6-7', '7-8', '8-9']%>
+<%= f.submit "Edit a reservation" %>
+
+<% end %>

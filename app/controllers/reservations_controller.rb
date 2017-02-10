@@ -22,7 +22,7 @@ class ReservationsController < ApplicationController
     @reservations = Reservation.all
   end
 
-  def delete
+  def destroy
     @reservation = Reservation.find(params[:id])
     @reservation.destroy
     redirect_to restaurants_path

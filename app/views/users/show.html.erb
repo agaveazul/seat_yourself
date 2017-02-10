@@ -11,7 +11,13 @@ Email : <%= @user.email %></p>
   Reservation Time : <%= r.timeslot %><br>
   Party Size : <%= r.party_size %><br>
   Reservation Date : <%= r.date %><br>
+  <%= r.id %>
 </p>
+
+
+
+<%= link_to "Edit a Reservation", edit_reservation_path(r) %>
+<%= link_to "Delete a Reservation", reservation_path(r), method: :delete, data: {confirm: "Are you sure you want to delete this reservation?"} %>
   <% end %>
 <% else %>
   <h2> Sorry, you do not have access to this account. </h2>
