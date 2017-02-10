@@ -10,20 +10,33 @@ class Reservation < ApplicationRecord
   private
 
   def party_size_less_than_capacity
+    if id
+
+      total_reservations = Reservation.where(timeslot: timeslot, date: date, restaurant_id: restaurant_id).sum(:party_size)
+      capacity = Restaurant.find(restaurant_id).capacity
+
+      available_capacity = capacity - total_reservations + Reservation.where(id: id).sum(:party_size)
+
+      restaurant = Restaurant.find(restaurant_id).name
+
+      errors.add(restaurant, 'does not have enough space for this number of guests!') if party_size >  available_capacity
+    else
+
     total_reservations = Reservation.where(timeslot: timeslot, date: date, restaurant_id: restaurant_id).sum(:party_size)
     capacity = Restaurant.find(restaurant_id).capacity
     available_capacity = capacity - total_reservations
 
     restaurant = Restaurant.find(restaurant_id).name
 
-    if party_size >  available_capacity
-      errors.add(restaurant, 'does not have enough space for this number of guests!')
+    errors.add(restaurant, 'does not have enough space for this number of guests!') if party_size >  available_capacity
+
     end
   end
 
   def date_greater_than_or_equal_to_today
-    if date < Date.today
-      errors.add(:date, 'cannot be before today.')
-    end
-  end
+     if date < Date.today
+       errors.add(:date, 'cannot be before today.')
+     end
+   end
+
 end
