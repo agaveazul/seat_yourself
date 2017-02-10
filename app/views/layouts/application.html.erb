@@ -15,7 +15,7 @@
     </div>
     <div class="links">
       <% if current_user %>
-      <p><span class="login-link"> Signed in as <%= link_to current_user.name.capitalize, user_path(current_user.id) %>, </span> <%= link_to 'Log out', session_path("current"), :method => :delete %> </p>
+      <p><span class="login-link"> Signed in as <%= link_to current_user.name.capitalize, user_path(current_user.id) %>, </span> &nbsp; &nbsp;<%= link_to 'Log out', session_path("current"), :method => :delete %> </p>
       <% else %>
       <p><%= link_to 'Log In', new_session_url %>    |    <%= link_to 'Sign Up', new_user_url %></p>
       <% end %><br>

@@ -18,7 +18,7 @@ header {
 }
 
 footer {
-  text-align: right;
+  text-align: center;
   /*background-color: #36454f;*/
   /*color: white;*/
   background-color: white;
@@ -36,20 +36,13 @@ header a {
 
 .links {
   text-align: right;
-  width: 51%;
+  width: 55%;
   display: inline-block;
-  margin-top: 10px;
-  margin-left: 20px;
+  color: white;
 }
 
 .root {
     padding-left: 1.5rem;
-    width: 45%;
+    width: 41%;
     float: left;
-    padding: 15px 5px;
-    margin-left: 10px;
-}
-
-.login-link {
-  color: white;
 }
