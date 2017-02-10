@@ -1,15 +1,18 @@
-<h1>This is <%= @user.name %>'s page</h1>
-<p>Phone Number : <%= @user.phone_number %></p>
-<p>Email : <%= @user.email %></p>
+  <% if current_user.id == @user.id %>
+<h1><%= @user.name.capitalize %>'s Account Details</h1>
+<p>Phone Number : <%= @user.phone_number %><br>
+Email : <%= @user.email %></p>
 
 <div>
   <h1>Reservations</h1>
-  <% if current_user.id == @user.id %>
     <% @user.reservations.each do |r| %>
-    <p> Restaurant : <%= r.reserved_restaurant.name %> </p><br>
-    <p> Reservation Time : <%= r.timeslot %></p> <br>
-    <p> Party Size : <%= r.party_size %></p> <br>
-    <p> Day of Reservation : <%= r.date %> </p>
+    <p> Restaurant : <%= r.reserved_restaurant.name %><br>
+    Reservation Time : <%= r.timeslot %><br>
+    Party Size : <%= r.party_size %><br>
+    Reservation Date : <%= r.date %><br>
+  </p>
     <% end %>
+<% else %>
+    <h2> Sorry, you do not have access to this account. </h2>
     <% end %>
 </div>

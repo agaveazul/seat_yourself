@@ -32,7 +32,7 @@
   <%= @restaurant.cuisine_type %>
 </div>
 </div>
-<br><br><br><br><br>
+<br><br>
 <div class="restaurant_details_summary"><%= @restaurant.summary %></div>
 <br><br><br>
 <br>
@@ -41,7 +41,7 @@
 <%= @restaurant.street_name %>, <%= @restaurant.postal_code %>, <%= @restaurant.city %>,
 <%= @restaurant.province %>, <%=@restaurant.country %>
 <br>
-  
+
 <%= @restaurant.email %>
 <%= @restaurant.phone_number %>
 <br>
@@ -58,7 +58,7 @@
     <div class="chosen_date">
       <p> Date: <%= @date %> </p>
     </div>
-    <div class="select_date"
+    <div class="select_date">
     <%= form_tag do %>
       <input type="hidden" name="_method" value="patch">
       <label for="date">Change date:</label>

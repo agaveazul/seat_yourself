@@ -35,12 +35,19 @@ header a {
 .links {
   text-align: right;
   width: 51%;
-  padding: 0px 15px;
   display: inline-block;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
 .root {
     padding-left: 1.5rem;
-    width: 41%;
+    width: 45%;
     float: left;
+    padding: 15px 5px;
+    margin-left: 10px;
+}
+
+.login-link {
+  color: white;
 }
