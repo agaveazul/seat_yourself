@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+#error_explanation {
+border: 1px dashed black;
+background-color: rgba(228,25,25,0.2);
+margin-bottom: 10px;
+}
+
+#notice {
+
+}
+
+.reservation-container {
+  background-color: rgba(228,25,25,0.1);
+  border: 1px solid black;
+  margin: 5px 0px;
+  padding: 0px 5px;
+  display: inline-block;
+}

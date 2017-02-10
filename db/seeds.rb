@@ -79,7 +79,61 @@ menu: "link_to_menu",
 user_id: 3,
 image_1: "dom.jpg",
 image_2: "#")
-#
+
+Restaurant.create!(name: 'El Celler de Can Roca',
+capacity: 100,
+street_name: 'Can Sunyer',
+neighbourhood: 'El Girona',
+postal_code: '17007',
+city: 'Girona',
+province: 'Girona',
+country: 'Spain',
+cuisine_type: 'Spanish',
+phone_number: 34972222157,
+email: 'restaurant@cellercanroca.com',
+price: '$$$',
+summary: "Much-loved former No 1 continues to set stellar standards, despite changing times. A must-visit restaurant when visiting the region.",
+menu: "link_to_menu",
+user_id: 4,
+image_1: "food2.jpeg",
+image_2: "#")
+
+Restaurant.create!(name: 'Mugaritz',
+capacity: 100,
+street_name: 'R. Barão de Capanema',
+neighbourhood: 'San Sebastian',
+postal_code: '1111',
+city: 'Errenteria',
+province: 'Seville',
+country: 'Spain',
+cuisine_type: 'Spanish',
+phone_number: 34943522455,
+email: 'restaurant@mugaritz.com',
+price: '$$$$$',
+summary: "A powerhouse of creativity hidden in the green hinterlands of the Basque country. A must-visit restaurant when visiting the region.",
+menu: "link_to_menu",
+user_id: 5,
+image_1: "food1.jpeg",
+image_2: "#")
+
+Restaurant.create!(name: 'Steireck',
+capacity: 100,
+street_name: 'Am Heumarkt 2a',
+neighbourhood: 'Heumarkt',
+postal_code: '1030',
+city: 'Vienna',
+province: 'Vienna',
+country: 'Austria',
+cuisine_type: 'Austrian',
+phone_number: 4317133168,
+email: 'pogusch@steirereck.at',
+price: '$$$$',
+summary: "Contemporary Austrian cooking in an equally ultra-modern setting, where delicacies are served at will. A must-visit.",
+menu: "link_to_menu",
+user_id: 6,
+image_1: "food.jpeg",
+image_2: "#")
+
 Reservation.create!(user_id: 1, restaurant_id: 1, timeslot: "4-5", party_size: 10, date: 20170211)
 Reservation.create!(user_id: 2, restaurant_id: 2, timeslot: "7-8", party_size: 6, date: 20170210)
 Reservation.create!(user_id: 3, restaurant_id: 3, timeslot: "11-12", party_size: 8, date: 20170209)
