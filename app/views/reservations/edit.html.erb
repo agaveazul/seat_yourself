@@ -1,6 +1,6 @@
 <% if flash[:reservation_errors] %>
    <div id="error_explanation">
-     <h2><%= pluralize(flash[:reservation_errors].count, "error") %> prohibited this product from being saved:</h2>
+     <p>Please address the following <%= pluralize(flash[:reservation_errors].count, "error") %> before resubmitting your request to change your reservation:</h2>
 
      <ul>
      <%flash[:reservation_errors].each do |msg| %>

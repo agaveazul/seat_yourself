@@ -5,7 +5,6 @@
 </div>
 <% @restaurants.each do |r| %>
 <div class='all-restaurants'>
-
   <%= link_to image_tag(r.image_1, :alt => "restaurant", height: 150, width: 150), restaurant_path(r)%><br>
   <div class="restaurant-info">
   <p class="restaurant-name"><%= link_to r.name, restaurant_path(r)%><br></p>
@@ -14,6 +13,7 @@
   <p><%=link_to r.neighbourhood, restaurant_path(r) %> | <%= link_to r.cuisine_type, restaurant_path(r) %></p>
   </div>
 </div>
+</a>
 <% end %>
 
 </main>
