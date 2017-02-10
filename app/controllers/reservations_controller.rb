@@ -13,7 +13,7 @@ class ReservationsController < ApplicationController
       redirect_to reservation_path(@reservation)
     else
       @timeslots = ["11-12", "12-1", "1-2", "2-3", "3-4", "4-5", "5-6", "6-7", "7-8", "8-9"]
-      render '/restaurants/show'
+      redirect_to(restaurant_path(@restaurant), {:flash => { :reservation_errors => @reservation.errors.full_messages }})
     end
 
   end

@@ -9,10 +9,12 @@
    </ul>
  </div>
 <% end %>
-
-<h1>Sign Up</h1>
+<br>
+<em> Welcome to Seat Yourself, your go-to for all reservations from now on!</em>
+<div class="signupform">
+<h1>Sign Up</h1><br><br>
+<div class="info">
   <%= form_for @user do |f| %>
-
   <p>
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -33,7 +35,9 @@
     <%= f.label :phone_number %>
     <%= f.text_field :phone_number %>
   </p>
-  <div>
+  <div class="signup">
     <%= f.submit "Sign Up" %>
   </div>
 <% end %>
+</div>
+</div>

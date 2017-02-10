@@ -21,5 +21,6 @@ class Restaurant < ApplicationRecord
         else
           p "Unavailable"
         end
-    end
+      end
+
 end
