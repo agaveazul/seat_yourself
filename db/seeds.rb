@@ -8,8 +8,8 @@
 
 
 User.create!(name: "Massimo Bottura",
-phone_number: 1234567890,
-email: "massimo.bottura@gmail.it",
+phone_number: 12345678,
+email: "massimo.bottura@gmail.yay",
 password: 'abcd1234',
 password_confirmation: 'abcd1234'
 )
@@ -22,7 +22,7 @@ password_confirmation: 'passw0rd'
 )
 
 User.create!(name: 'Alex Atala',
-phone_number: 98765423, 
+phone_number: 98765423,
 email: "alexa.atala@gmail.br",
 password: '12345678',
 password_confirmation: '12345678'
