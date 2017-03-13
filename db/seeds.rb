@@ -114,7 +114,7 @@ email: 'restaurant@mugaritz.com',
 price: '$$$$$',
 summary: "A powerhouse of creativity hidden in the green hinterlands of the Basque country. A must-visit restaurant when visiting the region.",
 menu: "link_to_menu",
-user_id: 5,
+user_id: 3,
 image_1: "food1.jpeg",
 image_2: "#")
 
@@ -132,7 +132,7 @@ email: 'pogusch@steirereck.at',
 price: '$$$$',
 summary: "Contemporary Austrian cooking in an equally ultra-modern setting, where delicacies are served at will. A must-visit.",
 menu: "link_to_menu",
-user_id: 6,
+user_id: 2,
 image_1: "food.jpeg",
 image_2: "#")
 
