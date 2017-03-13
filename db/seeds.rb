@@ -8,22 +8,22 @@
 
 
 User.create!(name: "Massimo Bottura",
-phone_number: 12345678,
-email: "massimo.bottura@gmail.yay",
+phone_number: 1234568,
+email: "massimo.bottura@gmail.nay",
 password: 'abcd1234',
 password_confirmation: 'abcd1234'
 )
 
 User.create!(name: 'Francis Mallmann',
-phone_number: 23445677,
-email: "francis.mallmann@gmail.ar",
+phone_number: 2344677,
+email: "francis.mallmann@gmail.arg",
 password: 'passw0rd',
 password_confirmation: 'passw0rd'
 )
 
 User.create!(name: 'Alex Atala',
-phone_number: 98765423,
-email: "alexa.atala@gmail.br",
+phone_number: 9876523,
+email: "alexa.atala@gmail.b",
 password: '12345678',
 password_confirmation: '12345678'
 )
@@ -37,8 +37,8 @@ city: 'Modena',
 province: 'Emilia-Romagna',
 country: 'Italy',
 cuisine_type: 'Italian',
-phone_number: 39059223912,
-email: 'osteria.francescana@gmail.il',
+phone_number: 390592912,
+email: 'osteria.francescana@gmail.ilo',
 price: '$$$$',
 summary: "In 2016, it was rated as the world's best restaurant in the World's 50 Best Restaurant. Imagine every nona coming together in a kitchen",
 menu: "link_to_menu",
@@ -55,7 +55,7 @@ city: 'Buenos Aires',
 province: 'Autonoma de Buenos Aires',
 country: 'Argentina',
 cuisine_type: 'Argentinian',
-phone_number: 541143035917,
+phone_number: 5411435917,
 email: 'patagonia.sur@gmail.ar',
 price: '$$$$',
 summary: "Bringing the gaucho tradition to La Boca, the restaurant centers on Argentine specialtries like succulent roasted Patagonian lamb and ojo de bife",
