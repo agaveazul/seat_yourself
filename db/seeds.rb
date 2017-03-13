@@ -15,12 +15,14 @@ password_confirmation: 'abcd1234'
 )
 
 User.create!(name: 'Francis Mallmann',
+phone_number: 23445677,
 email: "francis.mallmann@gmail.ar",
 password: 'passw0rd',
 password_confirmation: 'passw0rd'
 )
 
 User.create!(name: 'Alex Atala',
+phone_number: 98765423, 
 email: "alexa.atala@gmail.br",
 password: '12345678',
 password_confirmation: '12345678'
