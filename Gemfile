@@ -11,7 +11,6 @@ gem 'rails', '~> 5.0.1'
 # Use sqlite3 as the database for Active Record
 ruby '2.3.3'
 # Use Puma as the app server
-gem 'pg'
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -37,8 +36,7 @@ gem 'awesome_print'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'sqlite3', group: :development
-gem 'pg', '0.18.1', group: :production
+gem 'pg', group: :production
 gem 'rails_12factor', group: :production
 
 group :development, :test do
