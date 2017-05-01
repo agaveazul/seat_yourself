@@ -97,7 +97,7 @@ price: '$$$',
 summary: "Much-loved former No 1 continues to set stellar standards, despite changing times. A must-visit restaurant when visiting the region.",
 menu: "link_to_menu",
 user_id: 3,
-image_1: "food2.jpeg",
+image_1: "food2.jpg",
 image_2: "#")
 
 Restaurant.create!(name: 'Mugaritz',
@@ -115,7 +115,7 @@ price: '$$$$$',
 summary: "A powerhouse of creativity hidden in the green hinterlands of the Basque country. A must-visit restaurant when visiting the region.",
 menu: "link_to_menu",
 user_id: 2,
-image_1: "food1.jpeg",
+image_1: "food1.jpg",
 image_2: "#")
 
 Restaurant.create!(name: 'Steireck',
@@ -133,7 +133,7 @@ price: '$$$$',
 summary: "Contemporary Austrian cooking in an equally ultra-modern setting, where delicacies are served at will. A must-visit.",
 menu: "link_to_menu",
 user_id: 1,
-image_1: "food.jpeg",
+image_1: "food.jpg",
 image_2: "#")
 
 Reservation.create!(user_id: 1, restaurant_id: 1, timeslot: "4-5", party_size: 10, date: 20170611)
