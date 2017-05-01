@@ -5,15 +5,16 @@
 </div>
 <% @restaurants.each do |r| %>
 <div class='all-restaurants'>
-  <%= link_to image_tag(r.image_1, :alt => "restaurant", height: 150, width: 150), restaurant_path(r)%><br>
+  <%= link_to restaurant_path(r) do %><br>
+  <%=image_tag(r.image_1, :alt => "restaurant", height: 150, width: 150)%>    <br>
   <div class="restaurant-info">
-    <br>
-  <p class="restaurant-name"><%= link_to r.name, restaurant_path(r)%></p>
+  <p class="restaurant-name"><%= r.name%></p>
 
-  <p><%=link_to r.neighbourhood, restaurant_path(r) %> | <%= link_to r.cuisine_type, restaurant_path(r) %><br><br><br><br></p>
-  <p class="restaurant-price"><%= link_to r.price, restaurant_path(r) %></p>
+  <p><%=r.neighbourhood %> | <%= r.cuisine_type %><br><br><br><br></p>
+  <p class="restaurant-price"><%= r.price %></p>
   </div>
 </div>
+<% end %>
 </a>
 <% end %>
 
