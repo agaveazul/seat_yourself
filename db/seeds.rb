@@ -8,8 +8,8 @@
 
 
 User.create!(name: "Massimo Bottura",
-phone_number: 1234567890,
-email: "massimo.bottura@gmail.it",
+phone_number: 1234568,
+email: "massimo.bottura@gmail.nay",
 password: 'abcd1234',
 password_confirmation: 'abcd1234'
 )
@@ -37,8 +37,8 @@ city: 'Modena',
 province: 'Emilia-Romagna',
 country: 'Italy',
 cuisine_type: 'Italian',
-phone_number: 39059223912,
-email: 'osteria.francescana@gmail.il',
+phone_number: 390592912,
+email: 'osteria.francescana@gmail.ilo',
 price: '$$$$',
 summary: "In 2016, it was rated as the world's best restaurant in the World's 50 Best Restaurant. Imagine every nona coming together in a kitchen",
 menu: "link_to_menu",
@@ -55,7 +55,7 @@ city: 'Buenos Aires',
 province: 'Autonoma de Buenos Aires',
 country: 'Argentina',
 cuisine_type: 'Argentinian',
-phone_number: 541143035917,
+phone_number: 5411435917,
 email: 'patagonia.sur@gmail.ar',
 price: '$$$$',
 summary: "Bringing the gaucho tradition to La Boca, the restaurant centers on Argentine specialtries like succulent roasted Patagonian lamb and ojo de bife",
@@ -114,6 +114,7 @@ email: 'restaurant@mugaritz.com',
 price: '$$$$$',
 summary: "A powerhouse of creativity hidden in the green hinterlands of the Basque country. A must-visit restaurant when visiting the region.",
 menu: "link_to_menu",
+
 user_id: 2,
 image_1: "food1.jpg",
 image_2: "#")

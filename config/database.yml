@@ -21,5 +21,6 @@ test:
   database: seatyourself_test
 
 production:
+  production:
   <<: *default
   database: seatyourself_prod
