@@ -15,12 +15,14 @@ password_confirmation: 'abcd1234'
 )
 
 User.create!(name: 'Francis Mallmann',
+phone_number: 12345890,
 email: "francis.mallmann@gmail.ar",
 password: 'passw0rd',
 password_confirmation: 'passw0rd'
 )
 
 User.create!(name: 'Alex Atala',
+phone_number: 123456790,
 email: "alexa.atala@gmail.br",
 password: '12345678',
 password_confirmation: '12345678'
@@ -94,7 +96,7 @@ email: 'restaurant@cellercanroca.com',
 price: '$$$',
 summary: "Much-loved former No 1 continues to set stellar standards, despite changing times. A must-visit restaurant when visiting the region.",
 menu: "link_to_menu",
-user_id: 4,
+user_id: 3,
 image_1: "food2.jpeg",
 image_2: "#")
 
@@ -112,7 +114,7 @@ email: 'restaurant@mugaritz.com',
 price: '$$$$$',
 summary: "A powerhouse of creativity hidden in the green hinterlands of the Basque country. A must-visit restaurant when visiting the region.",
 menu: "link_to_menu",
-user_id: 5,
+user_id: 2,
 image_1: "food1.jpeg",
 image_2: "#")
 
@@ -130,10 +132,10 @@ email: 'pogusch@steirereck.at',
 price: '$$$$',
 summary: "Contemporary Austrian cooking in an equally ultra-modern setting, where delicacies are served at will. A must-visit.",
 menu: "link_to_menu",
-user_id: 6,
+user_id: 1,
 image_1: "food.jpeg",
 image_2: "#")
 
-Reservation.create!(user_id: 1, restaurant_id: 1, timeslot: "4-5", party_size: 10, date: 20170211)
-Reservation.create!(user_id: 2, restaurant_id: 2, timeslot: "7-8", party_size: 6, date: 20170210)
-Reservation.create!(user_id: 3, restaurant_id: 3, timeslot: "11-12", party_size: 8, date: 20170209)
+Reservation.create!(user_id: 1, restaurant_id: 1, timeslot: "4-5", party_size: 10, date: 20170611)
+Reservation.create!(user_id: 2, restaurant_id: 2, timeslot: "7-8", party_size: 6, date: 20170610)
+Reservation.create!(user_id: 3, restaurant_id: 3, timeslot: "11-12", party_size: 8, date: 20170609)

@@ -37,10 +37,10 @@ class Reservation < ApplicationRecord
   end
 
   def date_greater_than_or_equal_to_today
-    if date == nil
-    else
-      errors.add(:date, 'cannot be before today') if date < Date.today
-    end
+    # if date == nil
+    # else
+      errors.add(:date, 'cannot be before today') if date.present? && Date.parse(date.to_s) < Date.today
+    # end
   end
 
  end
